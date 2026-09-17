@@ -17,14 +17,14 @@ jobs:
       - name: Test website files
         run: |
           test -f index.html
-          test -f style.scss
+          test -f style.css
           test -f script.js
           echo "Website files found successfully"
 
       - name: Build / Package
         run: |
           mkdir -p build
-          cp index.html style.scss script.js build/
+          cp index.html style.css script.js build/
           echo "Website packaged successfully"
 
       - name: Configure AWS credentials
